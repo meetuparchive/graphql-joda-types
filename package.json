@@ -2,7 +2,7 @@
   "name": "graphql-joda-types",
   "version": "1.0.0",
   "scripts": {
-    "prepack": "npm run build:babel && npm run build:flow",
+    "prepack": "yarn run build:babel && yarn run build:flow",
     "build:babel": "babel src -d lib",
     "build:flow": "flow-copy-source src lib",
     "precommit": "pretty-quick --staged",
