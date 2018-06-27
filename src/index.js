@@ -3,20 +3,14 @@ import { GraphQLScalarType, Kind } from 'graphql';
 import type { GraphQLScalarTypeConfig } from 'graphql';
 import * as joda from 'js-joda';
 
-type Accessors = 'parse' | 'of';
-
-type JodaType<T> = {
-  [Accessors]: (string) => T,
-};
-
 const jodaToGraphql = <T>(
   name: string,
-  jodaType: JodaType<T>,
-  parserField: Accessors = 'parse'
+  jodaType: Class<T>, // eslint-disable-line no-undef
+  parser: string => T
 ) => {
   const parse = (value: string): T => {
     try {
-      return jodaType[parserField](value);
+      return parser(value);
     } catch (e) {
       throw new TypeError(
         `${name} can not represent an invalid string ${value}`
@@ -61,8 +55,24 @@ const jodaToGraphql = <T>(
   return new GraphQLScalarType(config);
 };
 
-export const LocalDate = jodaToGraphql('LocalDate', joda.LocalDate);
-export const LocalDateTime = jodaToGraphql('LocalDateTime', joda.LocalDateTime);
-export const LocalTime = jodaToGraphql('LocalTime', joda.LocalTime);
-export const ZonedDateTime = jodaToGraphql('ZonedDateTime', joda.ZonedDateTime);
-export const ZoneId = jodaToGraphql('ZoneId', joda.ZoneId, 'of');
+export const LocalDate = jodaToGraphql(
+  'LocalDate',
+  joda.LocalDate,
+  joda.LocalDate.parse
+);
+export const LocalDateTime = jodaToGraphql(
+  'LocalDateTime',
+  joda.LocalDateTime,
+  joda.LocalDateTime.parse
+);
+export const LocalTime = jodaToGraphql(
+  'LocalTime',
+  joda.LocalTime,
+  joda.LocalTime.parse
+);
+export const ZonedDateTime = jodaToGraphql(
+  'ZonedDateTime',
+  joda.ZonedDateTime,
+  joda.ZonedDateTime.parse
+);
+export const ZoneId = jodaToGraphql('ZoneId', joda.ZoneId, joda.ZoneId.of);
