@@ -1,6 +1,8 @@
 # graphql-joda-types
 
-This is a small JavaScript library allowing you to use the date/time types from [js-joda][] in your [GraphQL][] resolvers.
+This is a small JavaScript library allowing you to use the date/time types from [`js-joda`][js-joda] in your [GraphQL][] resolvers.
+
+(We recommend `js-joda` for all JavaScript date/time code, but if you disagree, consider [graphql-iso-date][] instead of this package.)
 
 ## Supported Types
 
@@ -57,3 +59,4 @@ You will then be able to use `js-joda` date and time types as you expect in your
 
 [js-joda]: https://github.com/js-joda/js-joda
 [graphql]: https://graphql.org/
+[graphql-iso-date]: https://www.npmjs.com/package/graphql-iso-date

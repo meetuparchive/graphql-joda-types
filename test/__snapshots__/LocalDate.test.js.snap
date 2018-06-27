@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocalDate has a description 1`] = `"A date string, such as 2018-07-01, serialized in ISO8601 format"`;
+
+exports[`LocalDate refuses to serialize strings that are not valid dates 1`] = `"LocalDate can not represent an invalid string some garbage"`;
+
+exports[`LocalDate rejects invalid dates 1`] = `"LocalDate can not represent an invalid string some garbage"`;

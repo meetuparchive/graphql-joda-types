@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocalTime has a description 1`] = `"A time string, such as 12:00:00, serialized in ISO8601 format"`;
+
+exports[`LocalTime refuses to serialize strings that are not valid times 1`] = `"LocalTime can not represent an invalid string some garbage"`;
+
+exports[`LocalTime rejects invalid times 1`] = `"LocalTime can not represent an invalid string some garbage"`;

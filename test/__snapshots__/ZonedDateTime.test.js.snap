@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ZonedDateTime has a description 1`] = `"A specific moment in time, such as 2018-07-01T12:00:00-04:00, serialized in ISO8601 format"`;
+
+exports[`ZonedDateTime refuses to serialize strings that are not valid dates 1`] = `"ZonedDateTime can not represent an invalid string some garbage"`;
+
+exports[`ZonedDateTime rejects invalid datetimes 1`] = `"ZonedDateTime can not represent an invalid string 2018-07-01"`;

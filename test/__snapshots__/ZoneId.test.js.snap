@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ZoneId has a description 1`] = `"A timezone ID from the IANA timezone database, such as America/New_York or UTC"`;
+
+exports[`ZoneId refuses to serialize strings that are not valid zones 1`] = `"ZoneId can not represent an invalid string some garbage"`;
+
+exports[`ZoneId rejects invalid zones 1`] = `"ZoneId can not represent an invalid string some garbage"`;

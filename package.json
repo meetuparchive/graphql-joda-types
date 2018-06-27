@@ -7,7 +7,7 @@
     "build:flow": "flow-copy-source src lib",
     "precommit": "pretty-quick --staged",
     "prepush": "eslint .",
-    "test": "flow check && eslint ."
+    "test": "flow check && eslint . && jest"
   },
   "description": "js-joda types for GraphQL",
   "main": "lib/index.js",
@@ -34,10 +34,16 @@
     "flow-copy-source": "^2.0.0",
     "graphql": "0.13.2",
     "husky": "^0.14.3",
+    "jest": "^23.2.0",
     "prettier": "^1.13.6",
     "pretty-quick": "^1.6.0"
   },
   "files": [
     "lib"
-  ]
+  ],
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/lib/"
+    ]
+  }
 }
