@@ -23,6 +23,14 @@ describe('LocalDate', () => {
     ).toThrowErrorMatchingSnapshot();
   });
 
+  it('rejects non-string types', () => {
+    expect(() => LocalDate.parseValue(2018)).toThrowErrorMatchingSnapshot();
+    expect(() =>
+      LocalDate.parseLiteral({ kind: Kind.INT, value: 20180701 })
+    ).toThrowErrorMatchingSnapshot();
+    expect(() => LocalDate.serialize(2018)).toThrowErrorMatchingSnapshot();
+  });
+
   it('parses undefined to undefined', () => {
     expect(LocalDate.parseValue(undefined)).toBeUndefined();
   });

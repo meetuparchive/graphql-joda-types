@@ -7,7 +7,7 @@
     "build:flow": "flow-copy-source src lib",
     "precommit": "pretty-quick --staged",
     "prepush": "eslint .",
-    "test": "flow check && eslint . && jest"
+    "test": "flow check && eslint . && jest --coverage"
   },
   "description": "js-joda types for GraphQL",
   "main": "lib/index.js",
@@ -25,6 +25,7 @@
     "babel-eslint": "^8.2.5",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-env": "^1.7.0",
+    "coveralls": "^3.0.1",
     "eslint": "4.18.1",
     "eslint-config-airbnb": "16.1.0",
     "eslint-config-prettier": "^2.9.0",
