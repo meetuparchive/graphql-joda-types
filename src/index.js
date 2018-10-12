@@ -6,7 +6,7 @@ import * as joda from 'js-joda';
 const jodaToGraphql = <T>(
   name: string,
   description: string,
-  jodaType: Class<T>, // eslint-disable-line no-undef
+  jodaType: Class<T>,
   parser: string => T
 ) => {
   const parse = (value: string): T => {
