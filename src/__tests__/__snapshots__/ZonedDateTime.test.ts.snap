@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ZonedDateTime has a description 1`] = `"A specific moment in time, such as 2018-07-01T12:00:00-04:00, serialized in ISO8601 format"`;
+
+exports[`ZonedDateTime refuses to serialize strings that are not valid dates 1`] = `"Text 'some garbage' could not be parsed at index 0: some garbage, at index: 0"`;
+
+exports[`ZonedDateTime rejects invalid datetimes 1`] = `"Text '2018-07-01' could not be parsed at index 10: 2018-07-01, at index: 10"`;
+
+exports[`ZonedDateTime rejects undefined and throws 1`] = `"nodejs can not represent non-string type undefined"`;

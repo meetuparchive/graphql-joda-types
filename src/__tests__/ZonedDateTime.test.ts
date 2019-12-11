@@ -1,6 +1,6 @@
 import { Kind } from 'graphql';
 import * as joda from 'js-joda';
-import { ZonedDateTime } from '../src';
+import { ZonedDateTime } from '../index';
 
 describe('ZonedDateTime', () => {
   it('has a description', () => {
@@ -22,10 +22,13 @@ describe('ZonedDateTime', () => {
     );
 
     expect(
-      ZonedDateTime.parseLiteral({
-        kind: Kind.STRING,
-        value: '2018-07-01T20:21:22-04:00',
-      })
+      ZonedDateTime.parseLiteral(
+        {
+          kind: Kind.STRING,
+          value: '2018-07-01T20:21:22-04:00',
+        },
+        null
+      )
     ).toEqual(
       joda.ZonedDateTime.of(
         2018,
@@ -46,8 +49,10 @@ describe('ZonedDateTime', () => {
     ).toThrowErrorMatchingSnapshot();
   });
 
-  it('parses undefined to undefined', () => {
-    expect(ZonedDateTime.parseValue(undefined)).toBeUndefined();
+  it('rejects undefined and throws', () => {
+    expect(() =>
+      ZonedDateTime.parseValue(undefined)
+    ).toThrowErrorMatchingSnapshot();
   });
 
   it('serializes dates', () => {

@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`LocalDateTime has a description 1`] = `"A date and time, such as 2018-07-01T12:00:00, without a timezone, serialized in ISO8601 format"`;
-
-exports[`LocalDateTime refuses to serialize strings that are not valid dates 1`] = `"LocalDateTime can not represent an invalid string some garbage"`;
-
-exports[`LocalDateTime rejects invalid datetimes 1`] = `"LocalDateTime can not represent an invalid string 2018-07-01"`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Duration has a description 1`] = `"A time-based amount of time, such as \\"34.5 seconds\\""`;
+
+exports[`Duration refuses to serialize strings that are not valid durations 1`] = `"Text cannot be parsed to a Duration: some garbage, at index: 0"`;
+
+exports[`Duration rejects invalid durations 1`] = `"Text cannot be parsed to a Duration: 2018-07-01, at index: 0"`;
+
+exports[`Duration rejects undefined and throws 1`] = `"nodejs can not represent non-string type undefined"`;

@@ -1,6 +1,6 @@
 import { Kind } from 'graphql';
 import * as joda from 'js-joda';
-import { ZoneId } from '../src';
+import { ZoneId } from '../index';
 
 const UTC = joda.ZoneId.of('UTC');
 
@@ -12,9 +12,9 @@ describe('ZoneId', () => {
   it('parses UTC', () => {
     expect(ZoneId.parseValue('UTC')).toEqual(UTC);
 
-    expect(ZoneId.parseLiteral({ kind: Kind.STRING, value: 'UTC' })).toEqual(
-      UTC
-    );
+    expect(
+      ZoneId.parseLiteral({ kind: Kind.STRING, value: 'UTC' }, null)
+    ).toEqual(UTC);
   });
 
   it('rejects invalid zones', () => {
@@ -23,8 +23,8 @@ describe('ZoneId', () => {
     ).toThrowErrorMatchingSnapshot();
   });
 
-  it('parses undefined to undefined', () => {
-    expect(ZoneId.parseValue(undefined)).toBeUndefined();
+  it('rejects undefined and throws', () => {
+    expect(() => ZoneId.parseValue(undefined)).toThrowErrorMatchingSnapshot();
   });
 
   it('serializes zones', () => {
