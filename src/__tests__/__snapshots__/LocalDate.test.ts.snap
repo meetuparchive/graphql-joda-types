@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocalDate has a description 1`] = `"A date string, such as 2018-07-01, serialized in ISO8601 format"`;
+
+exports[`LocalDate refuses to serialize strings that are not valid dates 1`] = `"Text 'some garbage' could not be parsed at index 0: some garbage, at index: 0"`;
+
+exports[`LocalDate rejects invalid dates 1`] = `"Text 'some garbage' could not be parsed at index 0: some garbage, at index: 0"`;
+
+exports[`LocalDate rejects non-string types 1`] = `"nodejs can not represent non-string type 2018"`;
+
+exports[`LocalDate rejects non-string types 2`] = `"nodejs can not represent non-string type {\\"kind\\":\\"IntValue\\",\\"value\\":\\"20180701\\"}"`;
+
+exports[`LocalDate rejects non-string types 3`] = `"nodejs can not represent invalid type 2018"`;
+
+exports[`LocalDate rejects undefined and throws 1`] = `"nodejs can not represent non-string type undefined"`;

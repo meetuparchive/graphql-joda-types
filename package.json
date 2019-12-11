@@ -1,47 +1,32 @@
 {
   "name": "graphql-joda-types",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "scripts": {
-    "prepack": "yarn run build:babel && yarn run build:flow",
-    "build:babel": "babel src -d lib",
-    "build:flow": "flow-copy-source src lib",
+    "build": "tsc --build",
     "precommit": "pretty-quick --staged",
-    "prepush": "eslint .",
-    "test": "flow check && eslint . && jest --coverage"
+    "test": "jest --coverage"
   },
   "description": "js-joda types for GraphQL",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "https://github.com/meetup/graphql-joda-types",
-  "author": "mike castleman <mlc@meetup.com>",
+  "author": "Meetup",
   "license": "MIT",
   "dependencies": {
     "js-joda": "^1.8.2"
   },
   "peerDependencies": {
-    "graphql": "^0.13.2"
+    "graphql": "^14.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-flow": "^7.0.0",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
+    "@types/jest": "^24.0.23",
     "coveralls": "^3.0.1",
-    "eslint": "4.18.2",
-    "eslint-config-airbnb": "16.1.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-flowtype": "^2.49.3",
-    "eslint-plugin-import": "2.13.0",
-    "eslint-plugin-jest": "21.17.0",
-    "flow-bin": "0.75.0",
-    "flow-copy-source": "^2.0.0",
-    "graphql": "0.13.2",
+    "graphql": "^14.5.8",
     "husky": "^0.14.3",
     "jest": "^23.6.0",
     "prettier": "^1.13.6",
     "pretty-quick": "^1.6.0",
+    "ts-jest": "^24.2.0",
     "typescript": "^3.7.3"
   },
   "files": [

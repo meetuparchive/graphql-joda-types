@@ -1,6 +1,6 @@
 import { Kind } from 'graphql';
 import * as joda from 'js-joda';
-import { LocalDateTime } from '../src';
+import { LocalDateTime } from '../index';
 
 describe('LocalDateTime', () => {
   it('has a description', () => {
@@ -13,10 +13,13 @@ describe('LocalDateTime', () => {
     );
 
     expect(
-      LocalDateTime.parseLiteral({
-        kind: Kind.STRING,
-        value: '2018-07-01T20:00:00',
-      })
+      LocalDateTime.parseLiteral(
+        {
+          kind: Kind.STRING,
+          value: '2018-07-01T20:00:00',
+        },
+        null
+      )
     ).toEqual(joda.LocalDateTime.of(2018, 7, 1, 20));
   });
 
@@ -26,8 +29,10 @@ describe('LocalDateTime', () => {
     ).toThrowErrorMatchingSnapshot();
   });
 
-  it('parses undefined to undefined', () => {
-    expect(LocalDateTime.parseValue(undefined)).toBeUndefined();
+  it('rejects undefined and throws', () => {
+    expect(() =>
+      LocalDateTime.parseValue(undefined)
+    ).toThrowErrorMatchingSnapshot();
   });
 
   it('serializes dates', () => {

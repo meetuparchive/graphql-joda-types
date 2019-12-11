@@ -1,6 +1,6 @@
-import { Kind } from 'graphql';
+import { IntValueNode, Kind, ValueNode } from 'graphql';
 import * as joda from 'js-joda';
-import { LocalDate } from '../src';
+import { LocalDate } from '../index';
 
 describe('LocalDate', () => {
   it('has a description', () => {
@@ -13,7 +13,7 @@ describe('LocalDate', () => {
     );
 
     expect(
-      LocalDate.parseLiteral({ kind: Kind.STRING, value: '2018-07-01' })
+      LocalDate.parseLiteral({ kind: Kind.STRING, value: '2018-07-01' }, null)
     ).toEqual(joda.LocalDate.of(2018, 7, 1));
   });
 
@@ -26,13 +26,15 @@ describe('LocalDate', () => {
   it('rejects non-string types', () => {
     expect(() => LocalDate.parseValue(2018)).toThrowErrorMatchingSnapshot();
     expect(() =>
-      LocalDate.parseLiteral({ kind: Kind.INT, value: 20180701 })
+      LocalDate.parseLiteral({ kind: Kind.INT, value: '20180701' }, null)
     ).toThrowErrorMatchingSnapshot();
     expect(() => LocalDate.serialize(2018)).toThrowErrorMatchingSnapshot();
   });
 
-  it('parses undefined to undefined', () => {
-    expect(LocalDate.parseValue(undefined)).toBeUndefined();
+  it('rejects undefined and throws', () => {
+    expect(() =>
+      LocalDate.parseValue(undefined)
+    ).toThrowErrorMatchingSnapshot();
   });
 
   it('serializes dates', () => {

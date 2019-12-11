@@ -1,6 +1,6 @@
 import { Kind } from 'graphql';
 import * as joda from 'js-joda';
-import { LocalTime } from '../src';
+import { LocalTime } from '../index';
 
 describe('LocalTime', () => {
   it('has a description', () => {
@@ -13,7 +13,7 @@ describe('LocalTime', () => {
     );
 
     expect(
-      LocalTime.parseLiteral({ kind: Kind.STRING, value: '20:21:22' })
+      LocalTime.parseLiteral({ kind: Kind.STRING, value: '20:21:22' }, null)
     ).toEqual(joda.LocalTime.of(20, 21, 22));
   });
 
@@ -23,8 +23,10 @@ describe('LocalTime', () => {
     ).toThrowErrorMatchingSnapshot();
   });
 
-  it('parses undefined to undefined', () => {
-    expect(LocalTime.parseValue(undefined)).toBeUndefined();
+  it('rejects undefined and throws', () => {
+    expect(() =>
+      LocalTime.parseValue(undefined)
+    ).toThrowErrorMatchingSnapshot();
   });
 
   it('serializes times', () => {
