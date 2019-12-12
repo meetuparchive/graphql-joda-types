@@ -1,5 +1,5 @@
 import { Kind } from 'graphql';
-import * as joda from 'js-joda';
+import * as joda from '@js-joda/core';
 import { LocalTime } from '../index';
 
 describe('LocalTime', () => {

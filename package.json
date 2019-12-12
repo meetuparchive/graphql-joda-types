@@ -1,19 +1,20 @@
 {
   "name": "graphql-joda-types",
-  "version": "2.0.0-alpha",
+  "version": "2.0.1",
   "scripts": {
     "build": "tsc --build",
     "precommit": "pretty-quick --staged",
+    "prepublish": "tsc",
     "test": "jest --coverage"
   },
   "description": "js-joda types for GraphQL",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "./dist/index.d.ts",
   "repository": "https://github.com/meetup/graphql-joda-types",
   "author": "Meetup",
   "license": "MIT",
   "dependencies": {
-    "js-joda": "^1.8.2"
+    "@js-joda/core": "^1.12.0"
   },
   "peerDependencies": {
     "graphql": "^14.0.0"
@@ -21,7 +22,7 @@
   "devDependencies": {
     "@types/jest": "^24.0.23",
     "coveralls": "^3.0.1",
-    "graphql": "^14.5.8",
+    "graphql": "^14.0.0",
     "husky": "^0.14.3",
     "jest": "^23.6.0",
     "prettier": "^1.13.6",
@@ -30,11 +31,6 @@
     "typescript": "^3.7.3"
   },
   "files": [
-    "lib"
-  ],
-  "jest": {
-    "testPathIgnorePatterns": [
-      "/lib/"
-    ]
-  }
+    "dist"
+  ]
 }

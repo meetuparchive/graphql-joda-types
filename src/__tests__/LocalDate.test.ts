@@ -1,5 +1,5 @@
-import { IntValueNode, Kind, ValueNode } from 'graphql';
-import * as joda from 'js-joda';
+import { Kind } from 'graphql';
+import * as joda from '@js-joda/core';
 import { LocalDate } from '../index';
 
 describe('LocalDate', () => {

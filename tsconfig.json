@@ -11,7 +11,7 @@
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "composite": true,
-    "declarationMap": true,
+    "declaration": true,
     "outDir": "dist",
     "rootDir": "./src",
     "typeRoots": ["node_modules/@types"]
