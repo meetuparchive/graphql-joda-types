@@ -1,6 +1,6 @@
 {
   "name": "graphql-joda-types",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "scripts": {
     "build": "tsc --build",
     "precommit": "pretty-quick --staged",
