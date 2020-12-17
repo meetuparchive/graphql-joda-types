@@ -1,0 +1,33 @@
+name: Build and Deploy
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    # defaults:
+    #   run:
+    #     working-directory: ./src
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      - name: Setup Yarn Cache 💾
+        id: yarn-cache
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-modules
+
+      - name: Install Node.js 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        uses: actions/setup-node@v1
+
+      - run: yarn install
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+
+      - name: Build 👷
+        run: |
+          yarn test
+        env:
+          CI: true
