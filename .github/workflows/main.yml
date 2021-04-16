@@ -5,9 +5,10 @@ on: push
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    # defaults:
-    #   run:
-    #     working-directory: ./src
+    env:
+      COVERALLS_REPO_TOKEN: '${{ secrets.COVERALLS_REPO_TOKEN }}'
+      COVERALLS_GIT_COMMIT: '${{ github.sha }}'
+      COVERALLS_GIT_BRANCH: '${{ github.ref }}'
 
     steps:
       - name: Checkout 🛎️
@@ -41,6 +42,11 @@ jobs:
           yarn test
         env:
           CI: true
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: mikeal/merge-release@master
         if: github.ref == 'refs/heads/master'
