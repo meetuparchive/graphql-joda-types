@@ -13,6 +13,12 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
 
+      - name: Turnstyle
+        uses: softprops/turnstyle@v1
+        timeout-minutes: 10
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Setup Yarn Cache 💾
         id: yarn-cache
         uses: actions/cache@v2
