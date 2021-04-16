@@ -6,4 +6,4 @@ exports[`LocalDateTime refuses to serialize strings that are not valid dates 1`]
 
 exports[`LocalDateTime rejects invalid datetimes 1`] = `"Text '2018-07-01' could not be parsed at index 10: 2018-07-01, at index: 10"`;
 
-exports[`LocalDateTime rejects undefined and throws 1`] = `"nodejs can not represent non-string type undefined"`;
+exports[`LocalDateTime rejects undefined and throws 1`] = `" can not represent non-string type undefined"`;

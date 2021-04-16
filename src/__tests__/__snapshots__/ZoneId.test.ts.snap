@@ -6,4 +6,4 @@ exports[`ZoneId refuses to serialize strings that are not valid zones 1`] = `"un
 
 exports[`ZoneId rejects invalid zones 1`] = `"unsupported ZoneId:some garbage"`;
 
-exports[`ZoneId rejects undefined and throws 1`] = `"nodejs can not represent non-string type undefined"`;
+exports[`ZoneId rejects undefined and throws 1`] = `" can not represent non-string type undefined"`;

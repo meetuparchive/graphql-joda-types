@@ -6,4 +6,4 @@ exports[`LocalTime refuses to serialize strings that are not valid times 1`] = `
 
 exports[`LocalTime rejects invalid times 1`] = `"Text 'some garbage' could not be parsed at index 0: some garbage, at index: 0"`;
 
-exports[`LocalTime rejects undefined and throws 1`] = `"nodejs can not represent non-string type undefined"`;
+exports[`LocalTime rejects undefined and throws 1`] = `" can not represent non-string type undefined"`;

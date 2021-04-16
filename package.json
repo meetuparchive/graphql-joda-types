@@ -5,7 +5,8 @@
     "build": "tsc --build",
     "precommit": "pretty-quick --staged",
     "prepublish": "tsc",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "description": "js-joda types for GraphQL",
   "main": "dist/index.js",
@@ -24,10 +25,10 @@
     "coveralls": "^3.0.1",
     "graphql": "^15.5.0",
     "husky": "^6.0.0",
-    "jest": "^23.6.0",
+    "jest": "^26.6.3",
     "prettier": "^2.2.1",
     "pretty-quick": "^2.0.2",
-    "ts-jest": "^24.2.0",
+    "ts-jest": "^26.5.5",
     "typescript": "^4.2.4"
   },
   "files": [
