@@ -36,7 +36,7 @@ jobs:
         env:
           CI: true
 
-      - uses: mikeal/merge-release@v4
+      - uses: mikeal/merge-release@master
         if: github.ref == 'refs/heads/master'
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
