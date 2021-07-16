@@ -50,7 +50,7 @@ And then in your GraphQL server:
 
 ```js
 import { LocalDate, ZonedDateTime, ZoneId } from 'graphql-joda-types';
-import { makeExecutableSchema } from 'graphql-tools';
+import { makeExecutableSchema } from '@graphql-tools/schema';
 
 const schema = makeExecutableSchema({
   resolvers: {
