@@ -495,9 +495,9 @@
     chalk "^4.0.0"
 
 "@js-joda/core@^3.2.0 || ^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@js-joda/core/-/core-4.0.0.tgz#c3ea4a8cdafaa8395b96ebfd6e098f5dd42eaad5"
-  integrity sha512-zKQgmIya9kA8fc4SuIknXGgT2cwX92MjrWyHWsC/pccSl4gXacYpdYgtc2tIj0VOe63Vp6DDKvTO6UpuyQ+tXg==
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@js-joda/core/-/core-4.2.1.tgz#990a6167f12cc504440117c49afb00003e7077f0"
+  integrity sha512-/PX1W+qCLfSYjHV3HtEuH6vaGuTtjvfA8ERt3xib8MmNkE6jSieFi/BZGPzHAbWLTgPpdNDQVDi4HgV1G7VCDg==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
