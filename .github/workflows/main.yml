@@ -4,6 +4,12 @@ on:
   workflow_dispatch:
   push:
 
+# This allows one Build workflow run to interrupt another
+# https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#concurrency
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
