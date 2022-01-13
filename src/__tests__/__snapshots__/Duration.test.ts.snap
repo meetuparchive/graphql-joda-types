@@ -6,4 +6,4 @@ exports[`Duration refuses to serialize strings that are not valid durations 1`] 
 
 exports[`Duration rejects invalid durations 1`] = `"Text cannot be parsed to a Duration: 2018-07-01, at index: 0"`;
 
-exports[`Duration rejects undefined and throws 1`] = `" can not represent non-string type undefined"`;
+exports[`Duration rejects undefined and throws 1`] = `"name is not defined"`;
