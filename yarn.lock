@@ -494,10 +494,10 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@js-joda/core@^3.2.0 || ^4.0.0":
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/@js-joda/core/-/core-4.3.1.tgz#1df9f197d060f1eb087a895a5e33adb7f12b58fc"
-  integrity sha512-oeaetlodcqVsiZDxnEcqsbs+sXBkASxua0mXs5OXuPQXz3/wdPTMlxwfQ4z2HKcOik3S9voW3QJkp/KLWDhvRQ==
+"@js-joda/core@^3.2.0 || ^4.0.0 || ^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@js-joda/core/-/core-5.0.0.tgz#af96589e01c31c35cee003e8d71e3a9c205ae5ae"
+  integrity sha512-Q7OBg6HZnXXWjfVubac8HfWsjQrEY6LQ6Z1wBWotEtzuY+7X5llO+Ih9qyP3uxz/k+muNk/pQPdAfMscyM+TiA==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
