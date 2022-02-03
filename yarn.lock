@@ -680,9 +680,9 @@
     chalk "^4.0.0"
 
 "@js-joda/core@^3.2.0 || ^4.0.0 || ^5.0.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@js-joda/core/-/core-5.1.0.tgz#ba39bc22b27add1031d1fbca645863c928cfb400"
-  integrity sha512-y4C/2EpK6ipQhPWnvbGgYfuG70t1ChkwBmA4g/w5EdVnyWRrcipo9p1SFNY5D47DaDeohZx50S9CZwEHYE2/tQ==
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@js-joda/core/-/core-5.2.0.tgz#fcebb14cffbf25adaaeec20d4579530e896ecd4a"
+  integrity sha512-0OriPYIaMLB3XiLQMe0BXKVIqeriTn3H7JMOzTsHEtt7Zqq+TetCu97KnAhU3ckiQZKBxfZshft+H1OC4D1lXw==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
