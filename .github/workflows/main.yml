@@ -3,6 +3,7 @@ name: main
 on:
   workflow_dispatch:
   push:
+  pull_request:
 
 # This allows one Build workflow run to interrupt another
 # https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#concurrency
