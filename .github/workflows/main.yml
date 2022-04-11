@@ -31,7 +31,7 @@ jobs:
 
       - name: Setup Yarn Cache 💾
         id: yarn-cache
-        uses: actions/cache@v3.0.2
+        uses: actions/cache@v3
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-node-modules-${{ hashFiles('**/yarn.lock') }}
