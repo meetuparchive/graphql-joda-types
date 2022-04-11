@@ -23,7 +23,7 @@ jobs:
       COVERALLS_GIT_COMMIT: '${{ github.sha }}'
       COVERALLS_GIT_BRANCH: '${{ github.ref }}'
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
