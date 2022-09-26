@@ -684,9 +684,9 @@
     chalk "^4.0.0"
 
 "@js-joda/core@^3.2.0 || ^4.0.0 || ^5.0.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@js-joda/core/-/core-5.2.0.tgz#fcebb14cffbf25adaaeec20d4579530e896ecd4a"
-  integrity sha512-0OriPYIaMLB3XiLQMe0BXKVIqeriTn3H7JMOzTsHEtt7Zqq+TetCu97KnAhU3ckiQZKBxfZshft+H1OC4D1lXw==
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/@js-joda/core/-/core-5.4.0.tgz#f241281fa0de9729f04ea9517851feb19ada29d3"
+  integrity sha512-AeQQWcDiuUtI6BXX59VR9KkdF4sLOeaicwpQKnNu8iBKJ8O1+M9FLs7ZCbdAMWmDLMoeaG1HG8PMbkuyuMTVgw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
